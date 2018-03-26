@@ -144,7 +144,7 @@ To streamline our process, we conducted the two analyses in parallel, cleaning a
 
 ### **A. Note**
 
-This scraper is working code, however, we've disabled here as it can take a while to run.  It's provided here as a working demonstration of how our data was collected.  All the actual work for this project was completed on a static data set which we collected early on in our efforts.  This was done to ensure that all group members were always working with identical data and that any user could re-produce our results as desired. 
+This scraper is working code, however, we've disabled it here as it can take a while to run.  It's provided here as a working demonstration of how our data was collected.  All the actual work for this project was completed on a static data set which we collected early on in our efforts.  This was done to ensure that all group members were always working with identical data and that any user could reproduce our results as desired. 
 
 The following chunk of code scrapes job postings from indeed.com and collects the results into a dataframe.  It's a port from some python code originally used to scrape our data set.
 
@@ -650,7 +650,7 @@ The idea here is to take a look at the "sentiment" of the text within each job p
 
 ### **A. Prepare the data**
 
-The first thing that we that we're going to do is tokenize the "summary" column of the data which contains all the text which we are interested in.  The essentially amounts to parsing the column into individual words and reshaping the dataframe into a "tidy" format where all individual words (tokens) are found in their own column.
+The first thing that we that we're going to do is tokenize the "summary" column of the data which contains all the text which we are interested in.  This essentially amounts to parsing the column into individual words and reshaping the dataframe into a "tidy" format where all individual words (tokens) are found in their own column.
 
 We'll then remove all the "stop_words" from this newly created data -- words like "if", "and", "the"... etc.
 
@@ -988,7 +988,7 @@ ggplot(hardskills2,aes(x=reorder(variable, value), y=value)) +
 
 ### **B. Word Cloud**
 
-We used the `summary` column to create a word clou of data science skills. To begin, we specified the removal of irrelevant words and stopwords that don't add context. 
+We used the `summary` column to create a word cloud of data science skills. To begin, we specified the removal of irrelevant words and stopwords that don't add context. 
 
 ```{r}
 
